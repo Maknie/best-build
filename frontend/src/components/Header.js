@@ -21,42 +21,42 @@ const Header = () => {
       <Navbar className="primaryBg" variant='secondary' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand className="colWhite poppinsFont hov">Dream Study</Navbar.Brand>
+            <Navbar.Brand className="colWhite poppinsFont hov">KAZSPASGROUP</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ml-auto'>
               <LinkContainer to='/cart'>
                 <Nav.Link  className="colWhite poppinsFont hov">
-                  <i className='fas fa-shopping-cart'></i> Cart
+                  <i className='fas fa-shopping-cart'></i> Корзина
                 </Nav.Link>
               </LinkContainer>
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id='username'>
                   <LinkContainer to='/profile'>
-                    <NavDropdown.Item className="poppinsFont" >Profile</NavDropdown.Item>
+                    <NavDropdown.Item className="poppinsFont">Профиль</NavDropdown.Item>
                   </LinkContainer>
                   <NavDropdown.Item className="poppinsFont" onClick={logoutHandler}>
-                    Logout
+                    Выйти из системы
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (
                 <LinkContainer to='/login'>
                   <Nav.Link className="colWhite poppinsFont hov">
-                    <i className='fas fa-user'></i> Sign In
+                    <i className='fas fa-user'></i> Вход в систему
                   </Nav.Link>
                 </LinkContainer>
               )}
               {userInfo && userInfo.isAdmin && (
-                <NavDropdown title='Admin' id='adminmenu'>
+                <NavDropdown title='Админ' id='adminmenu'>
                   <LinkContainer to='/admin/userlist'>
-                    <NavDropdown.Item className=" poppinsFont">Users</NavDropdown.Item>
+                    <NavDropdown.Item className=" poppinsFont">Пользователи</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to='/admin/productlist'>
-                    <NavDropdown.Item className=" poppinsFont">Products</NavDropdown.Item>
+                    <NavDropdown.Item className=" poppinsFont">Услуги</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to='/admin/orderlist'>
-                    <NavDropdown.Item className=" poppinsFont">Orders</NavDropdown.Item>
+                    <NavDropdown.Item className=" poppinsFont">Заказы</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}

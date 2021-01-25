@@ -84,9 +84,9 @@ const ProductScreen = ({ history, match }) => {
                     text={`${product.numReviews} reviews`}
                   />
                 </ListGroup.Item>
-                <ListGroup.Item>Cost: ${product.price}</ListGroup.Item>
+                <ListGroup.Item>Цена: ${product.price}</ListGroup.Item>
                 <ListGroup.Item>
-                  Description: {product.description}
+                  Описание: {product.description}
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -95,7 +95,7 @@ const ProductScreen = ({ history, match }) => {
                 <ListGroup variant='flush'>
                   <ListGroup.Item>
                     <Row>
-                      <Col>Price:</Col>
+                      <Col>Цена:</Col>
                       <Col>
                         <strong>${product.price}</strong>
                       </Col>
@@ -104,9 +104,9 @@ const ProductScreen = ({ history, match }) => {
 
                   <ListGroup.Item>
                     <Row>
-                      <Col>Available service:</Col>
+                      <Col>Доступная услуга:</Col>
                       <Col>
-                        {product.countInStock > 0 ? 'Yes' : 'No'}
+                        {product.countInStock > 0 ? 'Да' : 'Нет'}
                       </Col>
                     </Row>
                   </ListGroup.Item>
@@ -117,7 +117,7 @@ const ProductScreen = ({ history, match }) => {
                       type='button'
                       disabled={product.countInStock === 0}
                     >
-                      Add To Cart
+                      Добавить в корзину
                     </Button>
                   </ListGroup.Item>
                 </ListGroup>
@@ -126,8 +126,8 @@ const ProductScreen = ({ history, match }) => {
           </Row>
           <Row>
             <Col md={6}>
-              <h2>Reviews</h2>
-              {product.reviews.length === 0 && <Message>No Reviews</Message>}
+              <h2>Отзывы</h2>
+              {product.reviews.length === 0 && <Message>Нет отзывов</Message>}
               <ListGroup variant='flush'>
                 {product.reviews.map((review) => (
                   <ListGroup.Item key={review._id}>
@@ -138,10 +138,10 @@ const ProductScreen = ({ history, match }) => {
                   </ListGroup.Item>
                 ))}
                 <ListGroup.Item>
-                  <h2>Write a Customer Review</h2>
+                  <h2>Оставьте отзыв</h2>
                   {successProductReview && (
                     <Message variant='success'>
-                      Review submitted successfully
+                      Отзыв добвален успешно
                     </Message>
                   )}
                   {loadingProductReview && <Loader />}
@@ -157,16 +157,16 @@ const ProductScreen = ({ history, match }) => {
                           value={rating}
                           onChange={(e) => setRating(e.target.value)}
                         >
-                          <option value=''>Select...</option>
-                          <option value='1'>1 - Poor</option>
-                          <option value='2'>2 - Fair</option>
-                          <option value='3'>3 - Good</option>
-                          <option value='4'>4 - Very Good</option>
-                          <option value='5'>5 - Excellent</option>
+                          <option value=''>Выбрать...</option>
+                          <option value='1'>1 - Плохо</option>
+                          <option value='2'>2 - Не плохо</option>
+                          <option value='3'>3 - Хорошо</option>
+                          <option value='4'>4 - Очень хорошо</option>
+                          <option value='5'>5 - Отлично</option>
                         </Form.Control>
                       </Form.Group>
                       <Form.Group controlId='comment'>
-                        <Form.Label>Comment</Form.Label>
+                        <Form.Label>Коментарий</Form.Label>
                         <Form.Control
                           as='textarea'
                           row='3'
@@ -179,12 +179,12 @@ const ProductScreen = ({ history, match }) => {
                         type='submit'
                         variant='primary'
                       >
-                        Submit
+                        Подтвердить
                       </Button>
                     </Form>
                   ) : (
                     <Message>
-                      Please <Link to='/login'>sign in</Link> to write a review{' '}
+                      Пожалуйста <Link to='/login'>войдите в систему</Link> чтобы оставить отзыв{' '}
                     </Message>
                   )}
                 </ListGroup.Item>

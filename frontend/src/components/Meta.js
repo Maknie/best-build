@@ -12,9 +12,9 @@ const Meta = ({ title, description, keywords }) => {
 }
 
 Meta.defaultProps = {
-  title: 'Dream Study',
-  description: 'Let professionals help you to get your dream study',
-  keywords: 'university, scholarship, master, bachelor',
+  title: 'KazSpasGroup',
+  description: 'ПРОФЕССИОНАЛЬНАЯ АВАРИЙНО - СПАСАТЕЛЬНАЯ СЛУЖБА KAZSPASGROUP',
+  keywords: 'KAZSPASGROUP, СЛУЖБА, ПРОФЕССИОНАЛЬНАЯ, СПАСАТЕЛЬНАЯ',
 }
 
 export default Meta

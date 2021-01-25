@@ -35,7 +35,7 @@ const Product = ({ product }) => {
 
             <Card.Text style={{ color: "white" }} as="h3">
               <Link to={`/product/${product._id}`}>
-                <Button variant="info" className="">More</Button>
+                <Button variant="secondary" className="">Еще</Button>
               </Link>
             </Card.Text>
           </Card.Body>

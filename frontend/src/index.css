@@ -56,19 +56,23 @@ h2 {
 }
 
 .primaryBg {
-  background-color: #79589f;
+  background-color:#00a0e3;
 }
 
 .primaryCol {
-  color: #79589f;
+  color: #00a0e3;
 }
 
 .colWhite {
   color: #fff;
 }
 
+.colBlack {
+  color: #000;
+}
+
 .hov:hover {
-  color: #b7a4ce;
+  color: #ffee00;
 }
 
 #username, #adminmenu {
@@ -77,25 +81,25 @@ h2 {
 }
 
 #username:hover {
-  color: #b7a4ce;
+  color: #ffee00;
 }
 
 .p-2 {
   border: #fff 3px solid;
   border-radius: 5px;
   color: #fff;
-  background-color: #79589f;
+  background-color: #00a0e3;
 }
 
 .p-2:hover {
   background-color: #fff;
-  color: #b7a4ce;
+  color: #00a0e3;
   border: #fff 3px solid;
 }
 
 .p-2:active {
   background-color: #fff;
-  color: #b7a4ce;
+  color: #00a0e3;
   border: #fff 3px solid;
 }
 
@@ -122,4 +126,70 @@ body {
 
 .carousel-caption h2 {
   color: #000000;
+}
+
+.transparentBg {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  padding: 20px;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+div.sunholder {
+  display: inline-block;
+  animation: spin 8s linear 0s infinite;
+  margin-left: 30px;
+}
+div.sun {
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+div.raybase {
+  position: absolute;
+  top: 19px; /*50px/2-6px*/
+  left: 19px; /*(50px-12px)/2*/
+}
+div.ray {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 12px solid yellow;
+  animation: shine 1s linear 0s infinite alternate;
+}
+div.ray1 {
+  transform: translate(28px,0px); /*(50px+6px)/2*/
+}
+div.ray2 {
+  transform: rotate(45deg) translate(28px,0px) ;
+}
+div.ray3 {
+  transform: rotate(90deg) translate(28px,0px) ;
+}
+div.ray4 {
+  transform: rotate(135deg) translate(28px,0px) ;
+}
+div.ray5 {
+  transform: rotate(180deg) translate(28px,0px) ;
+}
+div.ray6 {
+  transform: rotate(225deg) translate(28px,0px) ;
+}
+div.ray7 {
+  transform: rotate(270deg) translate(28px,0px) ;
+}
+div.ray8 {
+  transform: rotate(315deg) translate(28px,0px) ;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes shine {
+  from { transform: translate(0px,0px) }
+  to { transform: translate(5px,0px) }
 }

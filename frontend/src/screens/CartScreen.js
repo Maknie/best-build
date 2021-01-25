@@ -32,10 +32,10 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <Row>
       <Col md={8}>
-        <h1>Cart</h1>
+        <h1>Корзина</h1>
         {cartItems.length === 0 ? (
           <Message>
-            Your cart is empty <Link to='/'>Go Back</Link>
+            Ваша корзина пуста. <Link to='/'>Назад</Link>
           </Message>
         ) : (
           <ListGroup variant='flush'>
@@ -69,8 +69,8 @@ const CartScreen = ({ match, location, history }) => {
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h2>
-                Subtotal
-                services
+                Сумма
+                услуг
               </h2>
               $
               {cartItems
@@ -84,7 +84,7 @@ const CartScreen = ({ match, location, history }) => {
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
-                Proceed To Checkout
+                Заказать
               </Button>
             </ListGroup.Item>
           </ListGroup>

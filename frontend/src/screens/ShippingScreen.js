@@ -25,13 +25,13 @@ const ShippingScreen = ({ history }) => {
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 />
-      <h1>Serving contacts</h1>
+      <h1>Контактные данные</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='address'>
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>Электронная почта</Form.Label>
           <Form.Control
             type='email'
-            placeholder='Enter email'
+            placeholder='Введите эл. почту'
             value={address}
             required
             onChange={(e) => setAddress(e.target.value)}
@@ -39,10 +39,10 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Form.Group controlId='city'>
-          <Form.Label>City</Form.Label>
+          <Form.Label>Город</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter city'
+            placeholder='Введите город в котором проживаете'
             value={city}
             required
             onChange={(e) => setCity(e.target.value)}
@@ -50,10 +50,10 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Form.Group controlId='postalCode'>
-          <Form.Label>Phone number</Form.Label>
+          <Form.Label>Номер телефона</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter phone number'
+            placeholder='Ввдите номер телефона'
             value={postalCode}
             required
             onChange={(e) => setPostalCode(e.target.value)}
@@ -61,10 +61,10 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Form.Group controlId='country'>
-          <Form.Label>Full name</Form.Label>
+          <Form.Label>Полное имя</Form.Label>
           <Form.Control
             type='text'
-            placeholder='Enter full name'
+            placeholder='Введите полное имя'
             value={country}
             required
             onChange={(e) => setCountry(e.target.value)}
@@ -72,7 +72,7 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Button type='submit' className='primaryBg'>
-          Continue
+          Продолжить
         </Button>
       </Form>
     </FormContainer>

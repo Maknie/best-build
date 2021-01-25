@@ -19,11 +19,11 @@ const SearchBox = ({ history }) => {
         type='text'
         name='q'
         onChange={(e) => setKeyword(e.target.value)}
-        placeholder='Search...'
+        placeholder='Поиск служб ...'
         className='mr-sm-2 ml-sm-5 poppinsFont'
       ></Form.Control>
       <Button type='submit' variant='light' className='p-2 poppinsFont'>
-        Search
+        Поиск
       </Button>
     </Form>
   )
