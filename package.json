@@ -1,7 +1,7 @@
 {
-  "name": "bestbuild",
+  "name": "dreamstudy",
   "version": "1.0.0",
-  "description": "Let proffesionals build your building",
+  "description": "Find your best university",
   "main": "server.js",
   "type": "module",
   "scripts": {
